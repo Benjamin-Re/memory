@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*border-box macht das alle Elemente padding und border, bei content-box nur für content*/
+}
+
+body {
+    height: 100vh; /*viewport units: Größe relativ zu Fenstergröße (Bei Prozent relativ zu Parent Element)*/
+    display: flex; /*Alle Nachkommen eines flex containers werden zu Flex-Items und in einer Zeile angeordnet. Alle Flex-
+                        Items bekommen dieselbe Höhe und werden gleichmäßig verteilt. display: grid wäre auch denkbar*/
+    background: #060AB2;
+}
+
+#memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Zeilenumbruch wenn zu viele Elemente für eine Zeile vorhanden sind (nowrap würde die Elemente quetchen)*/
+    perspective: 1000px; /* Perspektive im parent Element ermöglicht 3d space */
+}
+
+.memory-card {
+    width: calc(25% - 10px); /*kalkuliere 25% der Seite pro Karte - 10px für die margin (margin ist der Platz außerhalb der Border)*/
+    height: calc(33.333% - 10px); /*das gleiche für die Höhe*/
+    margin: 5px; /*5px Abstand*/
+    position: relative; /*relative positioniert das Element relativ zu sich selbst, absolut orientiert sich an der oberen linken Ecke,
+                                    static am parent*/
+    transform-style: preserve-3d; /*das Objekt wird 3-Dimensional dargestellt. */
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
+    transition: transform .2s; /* time of transition, must be here in the parent element and not in the :hover style block*/
+}
+
+.front-face, /* the images on the cards*/
+.back-face {
+  width: 100%; /*100% vom parent element memory-card*/
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #1C7CCC;
+  backface-visibility: hidden /* when two elements are stacked on top of each other, hidden hides the back-face,
+                                */visible would show both
+}
+
+.front-face {
+  transform: rotateY(180deg); /* when the card is flipped, we need to rotate the before hidden img to show it*/
+}
+
+.memory-card:active { /* :active selects and styles the active element. Active meint, das angeklickte Element */
+    transform: scale(0.97); /* defines the size increase during the transformation*/
+
+}
+
+.memory-card.flip{
+    transform: rotateY(180deg); /*flips the card 180° along its y-axis, simulating a turnaround, geht nur richtig zusammen mit preserve-3d */
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory</title>
+    <link rel="stylesheet" href="./static/style.css" />
+</head>
+<body data-page="menu">
+    <section id="memory-game">
+        <form action="/memory" method="post">
+            <input type="radio" name="d" value="6">easy</input>
+            <input type="radio" name="d" value="12">middle</input>
+            <input type="radio" name="d" value="20">hard</input>
+            <button type="submit" value="Submit!"><a href="{{ url_for('memory') }}">Start</button>
+        </form>
+
+    </section>
+    <script src="./static/scripts.js"></script>
+</body>
+</html>
+
