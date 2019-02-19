@@ -1,0 +1,4 @@
+##To Do:
+# Schwierigkeitsgrad aussuchen lassen
+# Karten je nach Schwierigkeitsgrad (mit JS) erzeugen
+# Entsprechend mehr Bilder erstellen.
