@@ -10,8 +10,7 @@ def index():
 
 @app.route("/memory")
 def memory():
-    input = request.form['d']
-    return render_template('memory.html', input=input)
+    return render_template('memory.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
