@@ -6,12 +6,12 @@
 </head>
 <body data-page="menu">
     <section id="memory-game">
-        <form action="/memory" method="post">
-            <input type="radio" name="d" value="6">easy</input>
-            <input type="radio" name="d" value="12">middle</input>
-            <input type="radio" name="d" value="20">hard</input>
-            <button type="submit" value="Submit!"><a href="{{ url_for('memory') }}">Start</button>
-        </form>
+        <p>Das ist ein Memory-Spiel. Suche die Karten die zusammen passen.
+        Entscheide dich zuerst für einen Schwierigkeitsgrad:</p>
+        <button class="btn" type="submit" value="Submit!"><a href="{{ url_for('memory0') }}">Einfach</button>
+        <button class="btn" type="submit" value="Submit!"><a href="{{ url_for('memory') }}">Normal</button>
+        <button class="btn" type="submit" value="Submit!"><a href="{{ url_for('memory1') }}">Schwer</button>
+
 
     </section>
     <!-- <script src="./static/scripts.js"></script> -->

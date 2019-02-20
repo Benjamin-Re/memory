@@ -15,9 +15,27 @@ body {
     background: #060AB2;
 }
 
+p {
+    font-family: Arial;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+.btn {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    background: #eb94d0;
+    border-radius: 28px;
+
+}
+
 #memory-game {
-    width: 640px;
-    height: 640px;
+    width: 700px;
+    height: 700px;
     margin: auto;
     display: flex;
     flex-wrap: wrap; /* Zeilenumbruch wenn zu viele Elemente für eine Zeile vorhanden sind (nowrap würde die Elemente quetchen)*/

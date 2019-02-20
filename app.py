@@ -12,6 +12,16 @@ def index():
 def memory():
     return render_template('memory.html')
 
+@app.route("/memory1")
+def memory1():
+    return render_template('memory1.html')
+
+@app.route("/memory0")
+def memory0():
+    return render_template('memory0.html')
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 

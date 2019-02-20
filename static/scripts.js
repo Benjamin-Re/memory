@@ -84,11 +84,15 @@ cards.forEach(card => card.addEventListener('click', flipCard)); /* for loop dur
                                                                   * der => steht für eine Funktion.
                                                                   * function card() {card.addEventListener(click, flipCard)}; */
 
+
 // (function)() is an immediately invoked function expression
+
 !function shuffle(){
     cards.forEach(card =>{
-        let randomPos = Math.floor(Math.random()*12);
-        card.style.order = randomPos;
-        console.log(randomPos);
+            let randomPos = Math.floor(Math.random()*12);
+            card.style.order = randomPos;
+            console.log(randomPos);
     })
 }();
+
+
