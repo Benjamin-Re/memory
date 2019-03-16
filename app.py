@@ -18,7 +18,8 @@ def memory1():
 
 @app.route("/memory0")
 def memory0():
-    return render_template('memory0.html')
+    x = "HAHA"
+    return render_template('memory0.html', y=x)
 
 
 
